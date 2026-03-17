@@ -221,7 +221,7 @@ body {
   top: 70px;
   right: 1rem;
   min-width: 220px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.2px);
@@ -529,12 +529,11 @@ body {
 .banner__trust strong {
   display: block;
   font-family: var(--ff-display);
-  font-size: 1.05rem;
-  font-weight: 500;
+  font-size: 1.9rem;
+  font-weight: 600;
   color: var(--sand);
-  opacity: .9;
+  line-height: 1;
   margin-bottom: .3rem;
-  font-style: italic;
 }
 
 @media (max-width: 768px) {
