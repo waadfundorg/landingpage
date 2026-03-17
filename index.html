@@ -246,7 +246,7 @@
           <h3 class="prog-card__title">Grocery Assistance Programme</h3>
           <p class="prog-card__tagline">Fill the Gap</p>
 
-          <p class="prog-card__section-label">The need</p>
+          <p class="prog-card__section-label" id="donatenow">The need</p>
           <p class="prog-card__text">Since January 2025, over 40,000 Palestinians from the refugee camps of Tulkarem,
             Nur Al-Shams, and Jenin have been violently expelled from their homes. With UNRWA facing mounting
             restrictions and funding cuts, families in the Northern West Bank are being left behind.</p>
@@ -282,7 +282,7 @@
           <h3 class="prog-card__title">Higher Education Scholarship Programme</h3>
           <p class="prog-card__tagline">&nbsp;</p>
 
-          <p class="prog-card__section-label">The need</p>
+          <p class="prog-card__section-label" id="donatenow">The need</p>
           <p class="prog-card__text">A maze of almost 1,000 military checkpoints and repeated army incursions have
             prevented students from reaching their universities and caused a sharp increase in unemployment. As families
             lose income, female students are disproportionately forced to suspend or abandon their studies.</p>
@@ -414,8 +414,8 @@
       <p class="final-cta__sub">Rooted in community. Accountable to the people we serve.</p>
 
       <div class="final-cta__actions">
-        <a href="https://www.joinwaad.org/donate" class="btn btn--primary">Stand With Us</a>
-        <a href="https://www.joinwaad.org/donate#monthly" class="btn btn--ghost">Monthly Giving</a>
+        <a href="#donatenow" class="btn btn--primary">Stand With Us</a>
+        <a href="#donatenow" class="btn btn--ghost">Give Monthly</a>
       </div>
 
       <div class="final-cta__secondary">
@@ -452,59 +452,7 @@
   </footer>
 
 
-  <script>
-    // ── Nav scroll state
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 40);
-    });
-
-    // ── Hamburger menu
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    hamburger.addEventListener('click', () => {
-      const isOpen = hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', isOpen);
-    });
-
-    // Close mobile menu when a link is clicked
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', false);
-      });
-    });
-
-    // Close mobile menu on outside click
-    document.addEventListener('click', (e) => {
-      if (!nav.contains(e.target) && !mobileMenu.contains(e.target)) {
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', false);
-      }
-    });
-
-    // ── Reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-
-    reveals.forEach(r => observer.observe(r));
-
-    // Hero stagger — show immediately
-    document.querySelectorAll('.hero .reveal').forEach((el, i) => {
-      setTimeout(() => el.classList.add('visible'), i * 120);
-    });
-  </script>
+  <script src="main.js" defer></script>
 
 </body>
 
