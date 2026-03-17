@@ -1,54 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wa'ad Community Fund | Grassroots Solidarity with Palestinian Families</title>
-  <meta name="description" content="Wa'ad is a grassroots-led community fund — sustained support, directly to Palestinian families and students in the Northern West Bank." />
+  <meta name="description"
+    content="Wa'ad is a grassroots-led community fund — sustained support, directly to Palestinian families and students in the Northern West Bank." />
   <link rel="canonical" href="https://www.joinwaad.org" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.joinwaad.org" />
   <meta property="og:title" content="Wa'ad Community Fund | Grassroots Solidarity with Palestinian Families" />
-  <meta property="og:description" content="Wa'ad is a grassroots-led community fund — sustained support, directly to Palestinian families and students in the Northern West Bank." />
+  <meta property="og:description"
+    content="Wa'ad is a grassroots-led community fund — sustained support, directly to Palestinian families and students in the Northern West Bank." />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Wa'ad Community Fund" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
+    rel="stylesheet" />
 
   <style>
     /* ── TOKENS ─────────────────────────────────────── */
     :root {
-      --forest:   #3C4833;
-      --olive:    #7C833C;
-      --bark:     #8B7159;
-      --trunk:    #9A7B5B;
-      --branch:   #A7835E;
-      --tan:      #B9A790;
-      --sand:     #DAC7A8;
-      --cream:    #E9D9C8;
-      --pale:     #F2E8DA;
-      --pom:      #962725;
-      --white:    #FFFFFF;
+      --forest: #3C4833;
+      --olive: #7C833C;
+      --bark: #8B7159;
+      --trunk: #9A7B5B;
+      --branch: #A7835E;
+      --tan: #B9A790;
+      --sand: #DAC7A8;
+      --cream: #E9D9C8;
+      --pale: #F2E8DA;
+      --pom: #962725;
+      --white: #FFFFFF;
       --text-dark: #2A2A25;
-      --text-mid:  #4A4535;
+      --text-mid: #4A4535;
 
       --ff-display: 'Cormorant Garamond', Georgia, serif;
-      --ff-body:    'Karla', system-ui, sans-serif;
+      --ff-body: 'Karla', system-ui, sans-serif;
 
-      --max:   1200px;
+      --max: 1200px;
       --gutter: clamp(1.5rem, 5vw, 4rem);
 
-      --ease: cubic-bezier(.22,.68,0,1.2);
+      --ease: cubic-bezier(.22, .68, 0, 1.2);
     }
 
     /* ── RESET ──────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-    img  { max-width: 100%; display: block; }
-    a    { color: inherit; text-decoration: none; }
-    ul   { list-style: none; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
 
     body {
       background: var(--pale);
@@ -59,43 +85,75 @@
     }
 
     /* ── UTILITY ────────────────────────────────────── */
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
-    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+    }
 
     /* ── NAVIGATION ─────────────────────────────────── */
     .nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
       background: #ffffff;
-      border-bottom: 1px solid rgba(139,113,89,.12);
+      border-bottom: 1px solid rgba(139, 113, 89, .12);
       transition: background .4s ease, backdrop-filter .4s ease, border-radius .4s ease,
-                  box-shadow .4s ease, border-color .4s ease, margin .4s ease, top .4s ease;
+        box-shadow .4s ease, border-color .4s ease, margin .4s ease, top .4s ease;
     }
+
     .nav.scrolled {
       top: 10px;
       margin: 0 1.5rem;
       border-radius: 16px;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.57);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(6.2px);
-      -webkit-backdrop-filter: blur(6.2px);
-      border: 1px solid rgba(255, 255, 255, 0.32);
+      backdrop-filter: blur(5.8px);
+      -webkit-backdrop-filter: blur(5.8px);
+      border: 1px solid rgba(255, 255, 255, 0.21);
     }
+
     .nav__inner {
-      display: flex; align-items: center; justify-content: space-between;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       padding: 0.75rem var(--gutter);
-      max-width: var(--max); margin: 0 auto;
+      max-width: var(--max);
+      margin: 0 auto;
     }
+
     .nav__logo {
-      display: flex; align-items: center; gap: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
     }
+
     .nav__logo-img {
-      width: 48px; height: 48px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       overflow: hidden;
       background: transparent;
       flex-shrink: 0;
     }
-    .nav__logo-img img { width: 100%; height: 100%; object-fit: cover; }
+
+    .nav__logo-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .nav__brand {
       font-family: var(--ff-display);
       font-size: 1.2rem;
@@ -104,6 +162,7 @@
       color: var(--forest);
       line-height: 1.2;
     }
+
     .nav__brand small {
       display: block;
       font-family: var(--ff-body);
@@ -113,9 +172,13 @@
       text-transform: uppercase;
       color: var(--trunk);
     }
+
     .nav__links {
-      display: flex; align-items: center; gap: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
     }
+
     .nav__links a {
       font-family: var(--ff-body);
       font-size: 0.78rem;
@@ -125,7 +188,11 @@
       color: var(--text-mid);
       transition: color .2s;
     }
-    .nav__links a:hover { color: var(--forest); }
+
+    .nav__links a:hover {
+      color: var(--forest);
+    }
+
     .nav__cta {
       background: var(--pom);
       color: var(--white) !important;
@@ -134,7 +201,11 @@
       letter-spacing: .08em;
       transition: background .2s, transform .15s var(--ease) !important;
     }
-    .nav__cta:hover { background: #7a1f1d !important; transform: translateY(-1px); }
+
+    .nav__cta:hover {
+      background: #7a1f1d !important;
+      transform: translateY(-1px);
+    }
 
     /* ── HAMBURGER ──────────────────────────────────── */
     .nav__hamburger {
@@ -142,13 +213,15 @@
       flex-direction: column;
       justify-content: center;
       gap: 5px;
-      width: 40px; height: 40px;
+      width: 40px;
+      height: 40px;
       cursor: pointer;
       background: none;
       border: none;
       padding: 4px;
       z-index: 110;
     }
+
     .nav__hamburger span {
       display: block;
       height: 2px;
@@ -158,14 +231,25 @@
       transition: transform .3s ease, opacity .3s ease;
       transform-origin: center;
     }
-    .nav__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav__hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav__hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav__hamburger.open span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .nav__hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
 
     .nav__mobile-menu {
       display: none;
       position: fixed;
-      top: 70px; right: 1rem;
+      top: 70px;
+      right: 1rem;
       min-width: 220px;
       background: rgba(255, 255, 255, 0.2);
       border-radius: 16px;
@@ -182,11 +266,13 @@
       transition: opacity .25s ease, transform .25s ease;
       pointer-events: none;
     }
+
     .nav__mobile-menu.open {
       opacity: 1;
       transform: translateY(0);
       pointer-events: all;
     }
+
     .nav__mobile-menu a {
       font-family: var(--ff-body);
       font-size: 0.82rem;
@@ -196,10 +282,17 @@
       color: var(--text-mid);
       transition: color .2s;
       padding: 0.4rem 0;
-      border-bottom: 1px solid rgba(139,113,89,.1);
+      border-bottom: 1px solid rgba(139, 113, 89, .1);
     }
-    .nav__mobile-menu a:last-child { border-bottom: none; }
-    .nav__mobile-menu a:hover { color: var(--forest); }
+
+    .nav__mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .nav__mobile-menu a:hover {
+      color: var(--forest);
+    }
+
     .nav__mobile-menu .nav__cta {
       display: inline-block;
       text-align: center;
@@ -207,9 +300,17 @@
     }
 
     @media (max-width: 768px) {
-      .nav__links { display: none; }
-      .nav__hamburger { display: flex; }
-      .nav__mobile-menu { display: flex; }
+      .nav__links {
+        display: none;
+      }
+
+      .nav__hamburger {
+        display: flex;
+      }
+
+      .nav__mobile-menu {
+        display: flex;
+      }
     }
 
     /* ── HERO ───────────────────────────────────────── */
@@ -227,15 +328,19 @@
       position: relative;
       overflow: hidden;
     }
+
     .hero__image img {
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       filter: brightness(.85) saturate(.9);
       transition: transform 8s ease;
     }
+
     .hero__image::after {
       content: '';
-      position: absolute; inset: 0;
+      position: absolute;
+      inset: 0;
       background: linear-gradient(90deg, var(--forest) 0%, transparent 60%);
     }
 
@@ -268,6 +373,7 @@
       margin-bottom: 1.5rem;
       letter-spacing: -.01em;
     }
+
     .hero__h1 em {
       font-style: italic;
       color: var(--sand);
@@ -290,12 +396,17 @@
       max-width: 44ch;
       margin-bottom: 3rem;
     }
+
     .hero__body strong {
       color: var(--sand);
       font-weight: 600;
     }
 
-    .hero__cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero__cta-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
 
     .btn {
       display: inline-block;
@@ -309,22 +420,26 @@
       transition: transform .2s var(--ease), background .2s, box-shadow .2s;
       cursor: pointer;
     }
+
     .btn--primary {
       background: var(--pom);
       color: var(--white);
     }
+
     .btn--primary:hover {
       background: #7a1f1d;
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(150,39,37,.3);
+      box-shadow: 0 8px 24px rgba(150, 39, 37, .3);
     }
+
     .btn--ghost {
       background: transparent;
       color: var(--sand);
-      border: 1px solid rgba(185,167,144,.4);
+      border: 1px solid rgba(185, 167, 144, .4);
     }
+
     .btn--ghost:hover {
-      background: rgba(185,167,144,.1);
+      background: rgba(185, 167, 144, .1);
       transform: translateY(-2px);
     }
 
@@ -332,7 +447,7 @@
       margin-top: 4rem;
       font-family: var(--ff-display);
       font-size: 1.8rem;
-      color: rgba(185,167,144,.25);
+      color: rgba(185, 167, 144, .25);
       letter-spacing: .1em;
       direction: rtl;
     }
@@ -342,12 +457,15 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;
       }
+
       .hero__image {
         height: 40vh;
       }
+
       .hero__image::after {
         background: linear-gradient(0deg, var(--forest) 0%, transparent 60%);
       }
+
       .hero__content {
         order: -1;
       }
@@ -356,23 +474,30 @@
     /* ── CREDIBILITY BANNER ─────────────────────────── */
     .banner {
       background: #5C3D2E;
-      border-top: 1px solid rgba(185,167,144,.15);
-      border-bottom: 1px solid rgba(185,167,144,.15);
+      border-top: 1px solid rgba(185, 167, 144, .15);
+      border-bottom: 1px solid rgba(185, 167, 144, .15);
       padding: 2.5rem var(--gutter);
     }
+
     .banner__inner {
-      max-width: var(--max); margin: 0 auto;
+      max-width: var(--max);
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
       align-items: center;
     }
+
     .banner__stats {
-      display: flex; gap: 2.5rem; flex-wrap: wrap;
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
     }
+
     .banner__stat span {
       display: block;
     }
+
     .banner__stat .num {
       font-family: var(--ff-display);
       font-size: 1.9rem;
@@ -380,6 +505,7 @@
       color: var(--sand);
       line-height: 1;
     }
+
     .banner__stat .lbl {
       font-family: var(--ff-body);
       font-size: 0.65rem;
@@ -389,9 +515,11 @@
       opacity: .7;
       margin-top: .25rem;
     }
+
     .banner__partners {
       text-align: center;
     }
+
     .banner__partners-label {
       font-family: var(--ff-body);
       font-size: 0.6rem;
@@ -401,9 +529,13 @@
       opacity: .6;
       margin-bottom: .75rem;
     }
+
     .banner__partner-list {
-      display: flex; flex-direction: column; gap: .3rem;
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
     }
+
     .banner__partner-list li {
       font-family: var(--ff-display);
       font-size: .92rem;
@@ -411,9 +543,11 @@
       color: var(--sand);
       opacity: .8;
     }
+
     .banner__trust {
       text-align: right;
     }
+
     .banner__trust p {
       font-family: var(--ff-body);
       font-size: 0.7rem;
@@ -423,6 +557,7 @@
       opacity: .6;
       line-height: 1.6;
     }
+
     .banner__trust strong {
       display: block;
       font-family: var(--ff-display);
@@ -435,17 +570,40 @@
     }
 
     @media (max-width: 768px) {
-      .banner__inner { grid-template-columns: 1fr; }
-      .banner__trust { text-align: left; }
+      .banner__inner {
+        grid-template-columns: 1fr;
+      }
+
+      .banner__trust {
+        text-align: left;
+      }
     }
 
     /* ── SECTION SHARED ─────────────────────────────── */
-    .section { padding: clamp(5rem, 9vw, 9rem) var(--gutter); }
-    .section--cream { background: var(--cream); }
-    .section--pale  { background: var(--pale); }
-    .section--sand  { background: var(--sand); }
-    .section--forest { background: var(--forest); color: var(--pale); }
-    .section--white { background: var(--white); }
+    .section {
+      padding: clamp(5rem, 9vw, 9rem) var(--gutter);
+    }
+
+    .section--cream {
+      background: var(--cream);
+    }
+
+    .section--pale {
+      background: var(--pale);
+    }
+
+    .section--sand {
+      background: var(--sand);
+    }
+
+    .section--forest {
+      background: var(--forest);
+      color: var(--pale);
+    }
+
+    .section--white {
+      background: var(--white);
+    }
 
     .section__tag {
       font-family: var(--ff-body);
@@ -456,7 +614,11 @@
       color: var(--olive);
       margin-bottom: 1.25rem;
     }
-    .section--forest .section__tag { color: var(--sand); opacity: .6; }
+
+    .section--forest .section__tag {
+      color: var(--sand);
+      opacity: .6;
+    }
 
     .section__h2 {
       font-family: var(--ff-display);
@@ -466,7 +628,10 @@
       letter-spacing: -.01em;
       margin-bottom: 1.5rem;
     }
-    .section__h2 em { font-style: italic; }
+
+    .section__h2 em {
+      font-style: italic;
+    }
 
     .section__h3 {
       font-family: var(--ff-display);
@@ -481,8 +646,14 @@
       color: var(--text-mid);
       line-height: 1.85;
     }
-    .section--forest .section__body { color: rgba(232,217,200,.8); }
-    .section__body p + p { margin-top: 1.2rem; }
+
+    .section--forest .section__body {
+      color: rgba(232, 217, 200, .8);
+    }
+
+    .section__body p+p {
+      margin-top: 1.2rem;
+    }
 
     /* ── INDOCTRINATION ─────────────────────────────── */
     .indict {
@@ -491,15 +662,21 @@
       gap: 5rem;
       align-items: start;
     }
+
     .indict__image {
-      position: sticky; top: 120px;
-      border-radius: 12px; overflow: hidden;
+      position: sticky;
+      top: 120px;
+      border-radius: 12px;
+      overflow: hidden;
     }
+
     .indict__image img {
-      width: 100%; aspect-ratio: 3/4;
+      width: 100%;
+      aspect-ratio: 3/4;
       object-fit: cover;
       filter: sepia(.15) saturate(.9);
     }
+
     .indict__text {}
 
     .indict__pull {
@@ -534,9 +711,18 @@
     }
 
     @media (max-width: 900px) {
-      .indict { grid-template-columns: 1fr; gap: 3rem; }
-      .indict__image { position: static; }
-      .indict__image img { aspect-ratio: 16/9; }
+      .indict {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .indict__image {
+        position: static;
+      }
+
+      .indict__image img {
+        aspect-ratio: 16/9;
+      }
     }
 
     /* ── USP ────────────────────────────────────────── */
@@ -548,16 +734,19 @@
       margin-bottom: 3.5rem;
       position: relative;
     }
+
     .usp__highlight::before {
       content: '\201C';
       position: absolute;
-      top: -1rem; left: 2rem;
+      top: -1rem;
+      left: 2rem;
       font-family: var(--ff-display);
       font-size: 6rem;
       color: var(--sand);
       opacity: .25;
       line-height: 1;
     }
+
     .usp__highlight p {
       font-family: var(--ff-display);
       font-size: clamp(1rem, 1.4vw, 1.2rem);
@@ -565,6 +754,7 @@
       font-style: italic;
       position: relative;
     }
+
     .usp__highlight strong {
       font-style: normal;
       color: var(--sand);
@@ -576,6 +766,7 @@
       gap: 4rem;
       align-items: start;
     }
+
     .usp__body p {
       line-height: 1.85;
       color: var(--text-mid);
@@ -591,14 +782,20 @@
       color: var(--olive);
       margin-bottom: 1.5rem;
     }
+
     .usp__how-list li {
       display: flex;
       gap: 1rem;
       margin-bottom: 1.2rem;
       padding-bottom: 1.2rem;
-      border-bottom: 1px solid rgba(139,113,89,.15);
+      border-bottom: 1px solid rgba(139, 113, 89, .15);
     }
-    .usp__how-list li:last-child { border-bottom: none; margin-bottom: 0; }
+
+    .usp__how-list li:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
     .usp__how-num {
       font-family: var(--ff-display);
       font-size: 1.5rem;
@@ -608,18 +805,23 @@
       width: 2rem;
       line-height: 1.2;
     }
+
     .usp__how-text {
       font-size: 0.93rem;
       color: var(--text-mid);
       line-height: 1.7;
     }
+
     .usp__how-text strong {
       font-weight: 600;
       color: var(--forest);
     }
 
     @media (max-width: 768px) {
-      .usp__grid { grid-template-columns: 1fr; gap: 3rem; }
+      .usp__grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
     }
 
     /* ── PROGRAMMES ─────────────────────────────────── */
@@ -641,7 +843,7 @@
 
     .prog-card {
       background: var(--white);
-      border: 1px solid rgba(139,113,89,.15);
+      border: 1px solid rgba(139, 113, 89, .15);
       border-radius: 12px;
       overflow: hidden;
       grid-row: 1 / span 12;
@@ -654,12 +856,17 @@
       overflow: hidden;
       aspect-ratio: 16/9;
     }
+
     .prog-card__image img {
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       transition: transform .6s ease;
     }
-    .prog-card:hover .prog-card__image img { transform: scale(1.04); }
+
+    .prog-card:hover .prog-card__image img {
+      transform: scale(1.04);
+    }
 
     /* ── tag (row 2) ── */
     .prog-card__tag {
@@ -721,6 +928,7 @@
       padding: 0 2.5rem 0.5rem;
       align-self: start;
     }
+
     .prog-card__why-list li,
     .prog-card__elig-list li {
       font-size: 0.88rem;
@@ -730,15 +938,19 @@
       padding-left: 1.2em;
       position: relative;
     }
+
     .prog-card__why-list li::before {
       content: '—';
-      position: absolute; left: 0;
+      position: absolute;
+      left: 0;
       color: var(--olive);
       font-size: .75em;
     }
+
     .prog-card__elig-list li::before {
       content: '·';
-      position: absolute; left: 0;
+      position: absolute;
+      left: 0;
       color: var(--pom);
       font-weight: 700;
     }
@@ -751,6 +963,7 @@
       padding: 1.25rem 1.5rem;
       align-self: center;
     }
+
     .prog-card__numbers p {
       font-family: var(--ff-display);
       font-size: 1rem;
@@ -772,6 +985,7 @@
         grid-template-rows: none;
         gap: 2.5rem;
       }
+
       .prog-card {
         grid-row: auto;
         display: flex;
@@ -779,6 +993,7 @@
         border-radius: 12px;
         overflow: hidden;
       }
+
       /* Reset all padding back to a consistent flush value */
       .prog-card__tag,
       .prog-card__title,
@@ -791,15 +1006,46 @@
         padding-left: 1.5rem;
         padding-right: 1.5rem;
       }
-      .prog-card__tag            { padding-top: 1.5rem; padding-bottom: 0.4rem; }
-      .prog-card__title          { padding-top: 0;      padding-bottom: 0.3rem; }
-      .prog-card__tagline        { padding-top: 0;      padding-bottom: 1rem;   }
-      .prog-card__section-label  { padding-top: 1.25rem; padding-bottom: 0.3rem; }
-      .prog-card__text           { padding-top: 0;      padding-bottom: 0.4rem; }
+
+      .prog-card__tag {
+        padding-top: 1.5rem;
+        padding-bottom: 0.4rem;
+      }
+
+      .prog-card__title {
+        padding-top: 0;
+        padding-bottom: 0.3rem;
+      }
+
+      .prog-card__tagline {
+        padding-top: 0;
+        padding-bottom: 1rem;
+      }
+
+      .prog-card__section-label {
+        padding-top: 1.25rem;
+        padding-bottom: 0.3rem;
+      }
+
+      .prog-card__text {
+        padding-top: 0;
+        padding-bottom: 0.4rem;
+      }
+
       .prog-card__why-list,
-      .prog-card__elig-list      { padding-top: 0;      padding-bottom: 0.5rem; }
-      .prog-card__numbers        { margin: 1rem 1.5rem; }
-      .prog-card__cta            { padding-top: 1.25rem; padding-bottom: 1.5rem; }
+      .prog-card__elig-list {
+        padding-top: 0;
+        padding-bottom: 0.5rem;
+      }
+
+      .prog-card__numbers {
+        margin: 1rem 1.5rem;
+      }
+
+      .prog-card__cta {
+        padding-top: 1.25rem;
+        padding-bottom: 1.5rem;
+      }
     }
 
     /* ── TESTIMONIALS ───────────────────────────────── */
@@ -809,13 +1055,15 @@
       gap: 2rem;
       margin: 4rem 0;
     }
+
     .testimonial {
-      background: rgba(255,255,255,.5);
-      border: 1px solid rgba(185,167,144,.25);
+      background: rgba(255, 255, 255, .5);
+      border: 1px solid rgba(185, 167, 144, .25);
       border-radius: 12px;
       padding: 2.5rem 2rem;
       position: relative;
     }
+
     .testimonial::before {
       content: '\201C';
       font-family: var(--ff-display);
@@ -826,6 +1074,7 @@
       display: block;
       margin-bottom: .5rem;
     }
+
     .testimonial__quote {
       font-family: var(--ff-display);
       font-size: 1.05rem;
@@ -834,6 +1083,7 @@
       color: var(--forest);
       margin-bottom: 1.5rem;
     }
+
     .testimonial__attr {
       font-family: var(--ff-body);
       font-size: 0.72rem;
@@ -854,7 +1104,9 @@
       flex-wrap: wrap;
       margin-bottom: 2rem;
     }
+
     .testimonials__num-item {}
+
     .testimonials__num-item .big {
       font-family: var(--ff-display);
       font-size: 2.2rem;
@@ -863,6 +1115,7 @@
       display: block;
       line-height: 1;
     }
+
     .testimonials__num-item .sm {
       font-size: 0.7rem;
       letter-spacing: .12em;
@@ -880,7 +1133,9 @@
     }
 
     @media (max-width: 900px) {
-      .testimonials__grid { grid-template-columns: 1fr; }
+      .testimonials__grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* ── DISTRIBUTION ───────────────────────────────── */
@@ -890,15 +1145,21 @@
       gap: 5rem;
       align-items: center;
     }
+
     .distribution__image {
-      border-radius: 12px; overflow: hidden;
+      border-radius: 12px;
+      overflow: hidden;
     }
+
     .distribution__image img {
-      width: 100%; aspect-ratio: 4/5;
+      width: 100%;
+      aspect-ratio: 4/5;
       object-fit: cover;
       filter: sepia(.1) saturate(.85);
     }
+
     .distribution__text {}
+
     .distribution__body p {
       color: var(--text-mid);
       line-height: 1.85;
@@ -906,8 +1167,14 @@
     }
 
     @media (max-width: 768px) {
-      .distribution__grid { grid-template-columns: 1fr; gap: 3rem; }
-      .distribution__image img { aspect-ratio: 16/9; }
+      .distribution__grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .distribution__image img {
+        aspect-ratio: 16/9;
+      }
     }
 
     /* ── FINAL CTA ──────────────────────────────────── */
@@ -918,20 +1185,27 @@
       position: relative;
       overflow: hidden;
     }
+
     .final-cta::before {
       content: '';
       position: absolute;
       font-family: var(--ff-display);
       font-size: 28vw;
-      color: rgba(185,167,144,.04);
-      top: 50%; left: 50%;
+      color: rgba(185, 167, 144, .04);
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
       pointer-events: none;
       line-height: 1;
       direction: rtl;
       letter-spacing: .1em;
     }
-    .final-cta__inner { position: relative; max-width: 760px; margin: 0 auto; }
+
+    .final-cta__inner {
+      position: relative;
+      max-width: 760px;
+      margin: 0 auto;
+    }
 
     .final-cta__tag {
       font-family: var(--ff-body);
@@ -952,6 +1226,7 @@
       color: var(--pale);
       margin-bottom: 1.25rem;
     }
+
     .final-cta__h2 em {
       font-style: italic;
       color: var(--sand);
@@ -973,12 +1248,14 @@
       flex-wrap: wrap;
       margin-bottom: 3rem;
     }
+
     .final-cta__secondary {
       display: flex;
       justify-content: center;
       gap: 2.5rem;
       flex-wrap: wrap;
     }
+
     .final-cta__secondary a {
       font-family: var(--ff-body);
       font-size: 0.75rem;
@@ -989,7 +1266,10 @@
       opacity: .7;
       transition: opacity .2s;
     }
-    .final-cta__secondary a:hover { opacity: 1; }
+
+    .final-cta__secondary a:hover {
+      opacity: 1;
+    }
 
     /* ── FOOTER ─────────────────────────────────────── */
     footer {
@@ -997,15 +1277,18 @@
       color: var(--tan);
       padding: 3rem var(--gutter) 2rem;
     }
+
     .footer__inner {
-      max-width: var(--max); margin: 0 auto;
+      max-width: var(--max);
+      margin: 0 auto;
       display: grid;
       grid-template-columns: 2fr 1fr 1fr;
       gap: 3rem;
       padding-bottom: 2.5rem;
-      border-bottom: 1px solid rgba(185,167,144,.1);
+      border-bottom: 1px solid rgba(185, 167, 144, .1);
       margin-bottom: 1.5rem;
     }
+
     .footer__brand-name {
       font-family: var(--ff-display);
       font-size: 1.3rem;
@@ -1013,6 +1296,7 @@
       color: var(--sand);
       margin-bottom: .5rem;
     }
+
     .footer__brand-desc {
       font-size: 0.8rem;
       line-height: 1.7;
@@ -1021,12 +1305,14 @@
       max-width: 38ch;
       margin-bottom: 1rem;
     }
+
     .footer__reg {
       font-size: 0.68rem;
       letter-spacing: .08em;
       color: var(--tan);
       opacity: .45;
     }
+
     .footer__col-title {
       font-family: var(--ff-body);
       font-size: 0.6rem;
@@ -1037,7 +1323,9 @@
       opacity: .5;
       margin-bottom: 1rem;
     }
-    .footer__col a, .footer__col p {
+
+    .footer__col a,
+    .footer__col p {
       display: block;
       font-size: 0.82rem;
       color: var(--tan);
@@ -1046,12 +1334,21 @@
       transition: opacity .2s;
       line-height: 1.6;
     }
-    .footer__col a:hover { opacity: 1; }
-    .footer__bottom {
-      max-width: var(--max); margin: 0 auto;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 1rem;
+
+    .footer__col a:hover {
+      opacity: 1;
     }
+
+    .footer__bottom {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
     .footer__copy {
       font-size: 0.7rem;
       color: var(--tan);
@@ -1059,7 +1356,9 @@
     }
 
     @media (max-width: 768px) {
-      .footer__inner { grid-template-columns: 1fr; }
+      .footer__inner {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* ── ANIMATIONS ─────────────────────────────────── */
@@ -1068,15 +1367,24 @@
       transform: translateY(28px);
       transition: opacity .7s ease, transform .7s ease;
     }
+
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
     /* stagger siblings */
-    .reveal:nth-child(2) { transition-delay: .1s; }
-    .reveal:nth-child(3) { transition-delay: .2s; }
-    .reveal:nth-child(4) { transition-delay: .3s; }
+    .reveal:nth-child(2) {
+      transition-delay: .1s;
+    }
+
+    .reveal:nth-child(3) {
+      transition-delay: .2s;
+    }
+
+    .reveal:nth-child(4) {
+      transition-delay: .3s;
+    }
 
     /* ── PLACEHOLDER IMAGE STYLE ────────────────────── */
     .img-placeholder {
@@ -1084,468 +1392,511 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: rgba(255,255,255,.3);
+      color: rgba(255, 255, 255, .3);
       font-family: var(--ff-body);
       font-size: 0.7rem;
       letter-spacing: .15em;
       text-transform: uppercase;
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       min-height: 360px;
     }
   </style>
 </head>
+
 <body>
 
-<nav class="nav" id="nav">
-  <div class="nav__inner">
-    <a href="/" class="nav__logo">
-      <div class="nav__logo-img">
-        <img src="https://static.wixstatic.com/media/ff0082_a0340e74e4c14ec9a2cc02ace1dccbdc~mv2.png" alt="Wa'ad Community Fund" />
-      </div>
-      <div class="nav__brand">
-        Wa'ad Community Fund
-        <small>Grassroots Solidarity</small>
-      </div>
-    </a>
-    <ul class="nav__links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#programmes">Programmes</a></li>
-      <li><a href="#donate" class="nav__cta btn">Stand With Us</a></li>
-    </ul>
-    <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<div class="nav__mobile-menu" id="mobileMenu">
-  <a href="#about" class="mobile-link">About</a>
-  <a href="#programmes" class="mobile-link">Programmes</a>
-  <a href="#donate" class="nav__cta btn mobile-link">Stand With Us</a>
-</div>
-
-<section class="hero" id="home">
-  <div class="hero__content">
-    <p class="hero__eyebrow">Grassroots · Community-led · Northern West Bank</p>
-
-    <h1 class="hero__h1">
-      Solidarity is not<br/>
-      a charity.<br/>
-      <em>It is a practice.</em>
-    </h1>
-
-    <p class="hero__sub">Rooted in the Northern West Bank</p>
-
-    <p class="hero__body">
-      Wa'ad is a community fund working in solidarity with Palestinian families and students in the Northern West Bank.
-      Support flows directly to communities, through the local organisations already serving them.
-      <strong>Palestinian partners lead this work. Wa'ad ensures they have the resources they need.</strong>
-    </p>
-
-    <div class="hero__cta-group">
-      <a href="#donate" class="btn btn--primary">Stand With Us</a>
-      <a href="#about" class="btn btn--ghost">Learn More</a>
-    </div>
-
-    <p class="hero__arabic"></p>
-  </div>
-
-  <div class="hero__image">
-    <!-- Replace src with your actual image -->
-    <img src="https://static.wixstatic.com/media/ff0082_cb9020a594f44cd2b04238585e3f7fa1~mv2.jpg" alt="Northern West Bank landscape" />
-  </div>
-</section>
-
-<!-- ── CREDIBILITY BANNER ──────────────────────────────── -->
-<div class="banner">
-  <div class="banner__inner">
-    <div class="banner__stats">
-      <div class="banner__stat">
-        <span class="num">450+</span>
-        <span class="lbl">Families reached</span>
-      </div>
-      <div class="banner__stat">
-        <span class="num">5</span>
-        <span class="lbl">Regions</span>
-      </div>
-      <div class="banner__stat">
-        <span class="num">$60K+</span>
-        <span class="lbl">Raised</span>
-      </div>
-    </div>
-    <div class="banner__partners">
-      <p class="banner__partners-label">Partner organisations</p>
-      <ul class="banner__partner-list">
-        <li>Women's Studies Centre</li>
-        <li>An-Najdah Association</li>
-        <li>Association of Women's Action</li>
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <div class="nav__logo-img">
+          <img src="https://static.wixstatic.com/media/ff0082_a0340e74e4c14ec9a2cc02ace1dccbdc~mv2.png"
+            alt="Wa'ad Community Fund" />
+        </div>
+        <div class="nav__brand">
+          Wa'ad Community Fund
+          <small>Grassroots Solidarity</small>
+        </div>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#programmes">Programmes</a></li>
+        <li><a href="#donate" class="nav__cta btn">Stand With Us</a></li>
       </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="banner__trust">
-      <strong>501(c)(3) recognised</strong>
-      <p>Vermont nonprofit corporation<br/>in operation since 2023</p>
+  </nav>
+
+  <div class="nav__mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#programmes" class="mobile-link">Programmes</a>
+    <a href="#donate" class="nav__cta btn mobile-link">Stand With Us</a>
+  </div>
+
+  <section class="hero" id="home">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Grassroots · Community-led · Northern West Bank</p>
+
+      <h1 class="hero__h1">
+        Solidarity is not<br />
+        a charity.<br />
+        <em>It is a practice.</em>
+      </h1>
+
+      <p class="hero__sub">Rooted in the Northern West Bank</p>
+
+      <p class="hero__body">
+        Wa'ad is a community fund working in solidarity with Palestinian families and students in the Northern West
+        Bank.
+        Support flows directly to communities, through the local organisations already serving them.
+        <strong>Palestinian partners lead this work. Wa'ad ensures they have the resources they need.</strong>
+      </p>
+
+      <div class="hero__cta-group">
+        <a href="#donate" class="btn btn--primary">Stand With Us</a>
+        <a href="#about" class="btn btn--ghost">Learn More</a>
+      </div>
+
+      <p class="hero__arabic"></p>
+    </div>
+
+    <div class="hero__image">
+      <!-- Replace src with your actual image -->
+      <img src="https://static.wixstatic.com/media/ff0082_cb9020a594f44cd2b04238585e3f7fa1~mv2.jpg"
+        alt="Northern West Bank landscape" />
+    </div>
+  </section>
+
+  <!-- ── CREDIBILITY BANNER ──────────────────────────────── -->
+  <div class="banner">
+    <div class="banner__inner">
+      <div class="banner__stats">
+        <div class="banner__stat">
+          <span class="num">450+</span>
+          <span class="lbl">Families reached</span>
+        </div>
+        <div class="banner__stat">
+          <span class="num">5</span>
+          <span class="lbl">Regions</span>
+        </div>
+        <div class="banner__stat">
+          <span class="num">$60K+</span>
+          <span class="lbl">Raised</span>
+        </div>
+      </div>
+      <div class="banner__partners">
+        <p class="banner__partners-label">Partner organisations</p>
+        <ul class="banner__partner-list">
+          <li>Women's Studies Centre</li>
+          <li>An-Najdah Association</li>
+          <li>Association of Women's Action</li>
+        </ul>
+      </div>
+      <div class="banner__trust">
+        <strong>501(c)(3) recognised</strong>
+        <p>Vermont nonprofit corporation<br />in operation since 2023</p>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- ── INDOCTRINATION ──────────────────────────────────── -->
-<section class="section section--cream" id="about">
-  <div class="wrap">
-    <p class="section__tag reveal">Context</p>
-    <div class="indict">
-      <div class="indict__image reveal">
-        <!-- Replace src with actual image -->
-        <img src="https://static.wixstatic.com/media/ff0082_391c520a87ee425689717a77d7e3a8bd~mv2.jpg" alt="Northern West Bank" />
-      </div>
-      <div class="indict__text">
-        <p class="indict__pull reveal">
-          The displacement of Palestinians is not an accident or humanitarian failure.
-        </p>
-        <p class="indict__sub reveal">
-          It is a deliberate strategy of attrition, trying to make life itself impossible.
-        </p>
-        <div class="indict__body reveal">
-          <p>
-            Since January 2025, 54,000 Palestinians have been violently expelled from the refugee camps of Tulkarem, Nur Al-Shams, and Jenin. They are not merely residential areas. They are a living archive of the Nakba, of displacement, of the refusal to accept the occupation of historic Palestine, and of the legal right of return that has not been forfeited.
+  <!-- ── INDOCTRINATION ──────────────────────────────────── -->
+  <section class="section section--cream" id="about">
+    <div class="wrap">
+      <p class="section__tag reveal">Context</p>
+      <div class="indict">
+        <div class="indict__image reveal">
+          <!-- Replace src with actual image -->
+          <img src="https://static.wixstatic.com/media/ff0082_391c520a87ee425689717a77d7e3a8bd~mv2.jpg"
+            alt="Northern West Bank" />
+        </div>
+        <div class="indict__text">
+          <p class="indict__pull reveal">
+            The displacement of Palestinians is not an accident or humanitarian failure.
           </p>
-          <p>
-            That is why they are targeted.
+          <p class="indict__sub reveal">
+            It is a deliberate strategy of attrition, trying to make life itself impossible.
           </p>
-          <p>
-            The strategy is attrition: demolishing homes, destroying infrastructure, strangling the local economy. The goal is to exhaust people until they leave or lose the will to stay.
-          </p>
-          <p>
-            <strong>Women and female students carry the heaviest burden.</strong> Keeping them fed, educated, and rooted in their land is an act of resistance.
-          </p>
+          <div class="indict__body reveal">
+            <p>
+              Since January 2025, 54,000 Palestinians have been violently expelled from the refugee camps of Tulkarem,
+              Nur Al-Shams, and Jenin. They are not merely residential areas. They are a living archive of the Nakba, of
+              displacement, of the refusal to accept the occupation of historic Palestine, and of the legal right of
+              return that has not been forfeited.
+            </p>
+            <p>
+              That is why they are targeted.
+            </p>
+            <p>
+              The strategy is attrition: demolishing homes, destroying infrastructure, strangling the local economy. The
+              goal is to exhaust people until they leave or lose the will to stay.
+            </p>
+            <p>
+              <strong>Women and female students carry the heaviest burden.</strong> Keeping them fed, educated, and
+              rooted in their land is an act of resistance.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── USP ─────────────────────────────────────────────── -->
-<section class="section section--pale">
-  <div class="wrap">
-    <p class="section__tag reveal">Who We Are</p>
-    <h2 class="section__h2 reveal">
-      Named for a daughter<br/><em>we carry forward.</em>
-    </h2>
+  <!-- ── USP ─────────────────────────────────────────────── -->
+  <section class="section section--pale">
+    <div class="wrap">
+      <p class="section__tag reveal">Who We Are</p>
+      <h2 class="section__h2 reveal">
+        Named for a daughter<br /><em>we carry forward.</em>
+      </h2>
 
-    <div class="usp__highlight reveal">
-      <p>
-        Wa'ad (وعد) means <strong>promise</strong> in Arabic. Our organisation is named after the daughter of one of our recipients, a woman displaced from Beit Lahia, Gaza, to Nablus. Her daughter Wa'ad lived only a few hours. <strong>With her mother's blessing, we carry out this work in her name.</strong>
+      <div class="usp__highlight reveal">
+        <p>
+          Wa'ad (وعد) means <strong>promise</strong> in Arabic. Our organisation is named after the daughter of one of
+          our recipients, a woman displaced from Beit Lahia, Gaza, to Nablus. Her daughter Wa'ad lived only a few hours.
+          <strong>With her mother's blessing, we carry out this work in her name.</strong>
+        </p>
+      </div>
+
+      <div class="usp__grid">
+        <div class="usp__body reveal">
+          <p>
+            In October 2023, as Gaza faced relentless bombardment and the Northern West Bank came under intensifying
+            assault, one of our founders reconnected with her former classmates in Nablus — now journalists, social
+            workers, and nurses — who were watching people in their communities suffer while support from abroad failed
+            to materialise on the ground.
+          </p>
+          <p>
+            That connection ran deep. A decade earlier she had spent a year at An-Najah National University in Nablus,
+            building relationships and an understanding of these communities, the people already doing the work, and
+            what that work needed but could not access.
+          </p>
+          <p>
+            So we decided to do something. In November 2023, we raised $11,500 through family and friends and reached 35
+            families in Nablus and Jenin. Today that network serves over 450 families across the Northern West Bank.
+          </p>
+        </div>
+
+        <div class="reveal">
+          <p class="usp__how-title">How we work</p>
+          <ul class="usp__how-list">
+            <li>
+              <span class="usp__how-num">01</span>
+              <span class="usp__how-text"><strong>Palestinian-led, always.</strong> We work exclusively with
+                Palestinian-led organisations — no occupation or collaborator organisations.</span>
+            </li>
+            <li>
+              <span class="usp__how-num">02</span>
+              <span class="usp__how-text"><strong>Decisions stay local.</strong> Who receives support and how it is
+                delivered is decided by our partners on the ground, not by us.</span>
+            </li>
+            <li>
+              <span class="usp__how-num">03</span>
+              <span class="usp__how-text"><strong>The communities others bypass.</strong> We work with working-class,
+                Arabic-speaking communities — the people most aid organisations do not reach.</span>
+            </li>
+            <li>
+              <span class="usp__how-num">04</span>
+              <span class="usp__how-text"><strong>Sustained, not episodic.</strong> What began as an emergency response
+                grew into sustained solidarity with the communities we serve.</span>
+            </li>
+            <li>
+              <span class="usp__how-num">05</span>
+              <span class="usp__how-text"><strong>Rooted since 2023.</strong> We have been on the ground since the
+                beginning.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROGRAMMES ──────────────────────────────────────── -->
+  <section class="section section--cream" id="programmes">
+    <div class="wrap">
+      <p class="section__tag reveal">Our Work</p>
+      <h2 class="section__h2 reveal">
+        Programmes that nurture resilience,<br />
+        <em>shaped by the communities we serve.</em>
+      </h2>
+
+      <div class="programmes__grid">
+
+        <!-- GAP -->
+        <div class="prog-card reveal">
+          <div class="prog-card__image">
+            <img src="https://blocks.astratic.com/img/general-img-landscape.png" alt="Grocery Assistance Programme" />
+          </div>
+          <p class="prog-card__tag">G.A.P.</p>
+          <h3 class="prog-card__title">Grocery Assistance Programme</h3>
+          <p class="prog-card__tagline">Fill the Gap</p>
+
+          <p class="prog-card__section-label">The need</p>
+          <p class="prog-card__text">Since January 2025, over 40,000 Palestinians from the refugee camps of Tulkarem,
+            Nur Al-Shams, and Jenin have been violently expelled from their homes. With UNRWA facing mounting
+            restrictions and funding cuts, families in the Northern West Bank are being left behind.</p>
+
+          <p class="prog-card__section-label">The mechanism</p>
+          <p class="prog-card__text">A $300 monthly grocery credit, delivered through trusted local grocery stores and
+            butchers in Tulkarem, Nablus, and Jenin. Families shop where their neighbours shop, choosing what they need,
+            when they need it. No food boxes. No outside distribution. No waste.</p>
+
+          <p class="prog-card__section-label">Why this model</p>
+          <ul class="prog-card__why-list">
+            <li>Provides immediate food security while preserving dignity and the right to choose</li>
+            <li>Frees limited household income for rent, medicine, clothes, and education</li>
+            <li>Supports local businesses and the local economy</li>
+            <li>Reduces stigma and strengthens solidarity between displaced families and host communities</li>
+          </ul>
+
+          <div class="prog-card__numbers">
+            <p>$3,600 per family, per year.<br />$60,000 a month supports 200 families consistently.</p>
+          </div>
+
+          <div class="prog-card__cta">
+            <a href="#donate" class="btn btn--primary">Fill the G.A.P. Now</a>
+          </div>
+        </div>
+
+        <!-- SCHOLARSHIP -->
+        <div class="prog-card reveal">
+          <div class="prog-card__image">
+            <img src="https://blocks.astratic.com/img/general-img-landscape.png"
+              alt="Higher Education Scholarship Programme" />
+          </div>
+          <p class="prog-card__tag">Scholarship</p>
+          <h3 class="prog-card__title">Higher Education Scholarship Programme</h3>
+          <p class="prog-card__tagline">&nbsp;</p>
+
+          <p class="prog-card__section-label">The need</p>
+          <p class="prog-card__text">A maze of almost 1,000 military checkpoints and repeated army incursions have
+            prevented students from reaching their universities and caused a sharp increase in unemployment. As families
+            lose income, female students are disproportionately forced to suspend or abandon their studies.</p>
+
+          <p class="prog-card__section-label">The mechanism</p>
+          <p class="prog-card__text">Targeted, needs-based tuition assistance for female students unable to afford
+            higher education or at risk of being forced to stop. We support students at Al-Quds Open University and
+            An-Najah National University. We do not fund private universities.</p>
+
+          <p class="prog-card__section-label">Eligibility priorities</p>
+          <ul class="prog-card__elig-list">
+            <li>Orphans and families where a parent or sibling is a martyr or deceased</li>
+            <li>Severe economic hardship, families with sick or injured members</li>
+            <li>Survivors of violence, former detainees, divorced women</li>
+            <li>Those directly impacted by the occupation</li>
+          </ul>
+
+          <div class="prog-card__numbers">
+            <p>
+              ~$150 Arts &amp; Humanities &nbsp;·&nbsp; ~$200 Engineering<br />
+              ~$260 Medicine &nbsp;·&nbsp; Year 1 goal: $50,000
+            </p>
+          </div>
+
+          <div class="prog-card__cta">
+            <a href="#donate" class="btn btn--primary">Support Her Education</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ────────────────────────────────────── -->
+  <section class="section section--pale">
+    <div class="wrap">
+      <p class="section__tag reveal">Voices</p>
+      <h2 class="section__h2 reveal">
+        From the ground.
+      </h2>
+
+      <div class="testimonials__numbers reveal">
+        <div class="testimonials__num-item">
+          <span class="big">450+</span>
+          <span class="sm">Families reached</span>
+        </div>
+        <div class="testimonials__num-item">
+          <span class="big">4</span>
+          <span class="sm">Campaigns</span>
+        </div>
+        <div class="testimonials__num-item">
+          <span class="big">$11,500</span>
+          <span class="sm">First campaign</span>
+        </div>
+        <div class="testimonials__num-item">
+          <span class="big">$28,000</span>
+          <span class="sm">Most recent campaign</span>
+        </div>
+      </div>
+
+      <div class="testimonials__grid">
+        <div class="testimonial reveal">
+          <p class="testimonial__quote">
+            "They told me to celebrate — they'd gone to the market to buy a treat for their children for the holiday.
+            They haven't been able to buy anything since the start of the War."
+          </p>
+          <p class="testimonial__attr">Layali &nbsp;·&nbsp; Women's Studies Centre Social Worker, Nablus</p>
+        </div>
+        <div class="testimonial reveal">
+          <p class="testimonial__quote">
+            "My daughter married a man from Gaza. Her entire family was killed — everyone except my five-year-old
+            granddaughter. Being here with you all, it's the first time I haven't felt totally alone since I got the
+            news."
+          </p>
+          <p class="testimonial__attr">Samar &nbsp;·&nbsp; Resident of Jenin Camp, grandmother</p>
+        </div>
+        <div class="testimonial reveal">
+          <p class="testimonial__quote">
+            "You all are the first people to come and offer any assistance. Tell the world — we just want to live like
+            everyone else."
+          </p>
+          <p class="testimonial__attr">Nisreen &nbsp;·&nbsp; Resident of Askar Camp, Nablus, mother of six</p>
+        </div>
+      </div>
+
+      <p class="testimonials__transparency reveal">
+        Every donation goes directly to the programme, including the costs that keep it running reliably, long term.
       </p>
     </div>
+  </section>
 
-    <div class="usp__grid">
-      <div class="usp__body reveal">
-        <p>
-          In October 2023, as Gaza faced relentless bombardment and the Northern West Bank came under intensifying assault, one of our founders reconnected with her former classmates in Nablus — now journalists, social workers, and nurses — who were watching people in their communities suffer while support from abroad failed to materialise on the ground.
+  <!-- ── DISTRIBUTION ────────────────────────────────────── -->
+  <section class="section section--cream">
+    <div class="wrap">
+      <div class="distribution__grid">
+        <div class="distribution__image reveal">
+          <!-- Replace src with your actual image -->
+          <img src="https://blocks.astratic.com/img/general-img-landscape.png" alt="Community distribution" />
+        </div>
+        <div class="distribution__text">
+          <h2 class="section__h2 reveal">Where does your contribution go?</h2>
+          <div class="distribution__body reveal">
+            <p>
+              Distributed directly through our in-country partner networks. Families are identified through regular
+              house visits by social workers, at-length discussions, and cross-checked lists, to ensure fairness and
+              prevent favouritism.
+            </p>
+            <p>
+              We do not work with international intermediaries. We do not fund occupation-affiliated organisations.
+              Every decision about who receives support and how it is delivered is made by Palestinian partners in the
+              communities themselves.
+            </p>
+            <p>
+              We publish our numbers. We are accountable to the communities we serve.
+            </p>
+          </div>
+          <div class="reveal" style="margin-top: 2.5rem;">
+            <a href="#donate" class="btn btn--primary">Solidarity is a practice. Start here.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL CTA ───────────────────────────────────────── -->
+  <section class="final-cta" id="donate">
+    <div class="final-cta__inner reveal">
+      <p class="final-cta__tag">Join Us</p>
+      <h2 class="final-cta__h2">
+        Stand with the communities<br />
+        <em>that refuse to disappear.</em>
+      </h2>
+      <p class="final-cta__sub">Rooted in community. Accountable to the people we serve.</p>
+
+      <div class="final-cta__actions">
+        <a href="https://www.joinwaad.org/donate" class="btn btn--primary">Stand With Us</a>
+        <a href="https://www.joinwaad.org/donate#monthly" class="btn btn--ghost">Monthly Giving</a>
+      </div>
+
+      <div class="final-cta__secondary">
+        <a href="https://instagram.com/waadfund" target="_blank" rel="noopener">Follow @waadfund</a>
+        <a href="mailto:contact@waadfund.org">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer>
+    <div class="footer__inner">
+      <div>
+        <p class="footer__brand-name">Wa'ad Community Fund</p>
+        <p class="footer__brand-desc">
+          A grassroots community fund working in solidarity with Palestinian families and students in the Northern West
+          Bank.
+          Palestinian partners lead this work. We ensure they have the resources they need.
         </p>
-        <p>
-          That connection ran deep. A decade earlier she had spent a year at An-Najah National University in Nablus, building relationships and an understanding of these communities, the people already doing the work, and what that work needed but could not access.
-        </p>
-        <p>
-          So we decided to do something. In November 2023, we raised $11,500 through family and friends and reached 35 families in Nablus and Jenin. Today that network serves over 450 families across the Northern West Bank.
-        </p>
+        <p class="footer__reg">501(c)(3) recognised Vermont nonprofit corporation</p>
       </div>
-
-      <div class="reveal">
-        <p class="usp__how-title">How we work</p>
-        <ul class="usp__how-list">
-          <li>
-            <span class="usp__how-num">01</span>
-            <span class="usp__how-text"><strong>Palestinian-led, always.</strong> We work exclusively with Palestinian-led organisations — no occupation or collaborator organisations.</span>
-          </li>
-          <li>
-            <span class="usp__how-num">02</span>
-            <span class="usp__how-text"><strong>Decisions stay local.</strong> Who receives support and how it is delivered is decided by our partners on the ground, not by us.</span>
-          </li>
-          <li>
-            <span class="usp__how-num">03</span>
-            <span class="usp__how-text"><strong>The communities others bypass.</strong> We work with working-class, Arabic-speaking communities — the people most aid organisations do not reach.</span>
-          </li>
-          <li>
-            <span class="usp__how-num">04</span>
-            <span class="usp__how-text"><strong>Sustained, not episodic.</strong> What began as an emergency response grew into sustained solidarity with the communities we serve.</span>
-          </li>
-          <li>
-            <span class="usp__how-num">05</span>
-            <span class="usp__how-text"><strong>Rooted since 2023.</strong> We have been on the ground since the beginning.</span>
-          </li>
-        </ul>
+      <div class="footer__col">
+        <p class="footer__col-title">Contact</p>
+        <a href="mailto:contact@waadfund.org">contact@waadfund.org</a>
+        <a href="https://instagram.com/waadfund" target="_blank" rel="noopener">@waadfund</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Areas served</p>
+        <p>Nablus &nbsp;·&nbsp; Tulkarem<br />Jenin &nbsp;·&nbsp; Tubas<br />Jerusalem</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ── PROGRAMMES ──────────────────────────────────────── -->
-<section class="section section--cream" id="programmes">
-  <div class="wrap">
-    <p class="section__tag reveal">Our Work</p>
-    <h2 class="section__h2 reveal">
-      Programmes that nurture resilience,<br/>
-      <em>shaped by the communities we serve.</em>
-    </h2>
-
-    <div class="programmes__grid">
-
-      <!-- GAP -->
-      <div class="prog-card reveal">
-        <div class="prog-card__image">
-          <img src="https://blocks.astratic.com/img/general-img-landscape.png" alt="Grocery Assistance Programme" />
-        </div>
-        <p class="prog-card__tag">G.A.P.</p>
-        <h3 class="prog-card__title">Grocery Assistance Programme</h3>
-        <p class="prog-card__tagline">Fill the Gap</p>
-
-        <p class="prog-card__section-label">The need</p>
-        <p class="prog-card__text">Since January 2025, over 40,000 Palestinians from the refugee camps of Tulkarem, Nur Al-Shams, and Jenin have been violently expelled from their homes. With UNRWA facing mounting restrictions and funding cuts, families in the Northern West Bank are being left behind.</p>
-
-        <p class="prog-card__section-label">The mechanism</p>
-        <p class="prog-card__text">A $300 monthly grocery credit, delivered through trusted local grocery stores and butchers in Tulkarem, Nablus, and Jenin. Families shop where their neighbours shop, choosing what they need, when they need it. No food boxes. No outside distribution. No waste.</p>
-
-        <p class="prog-card__section-label">Why this model</p>
-        <ul class="prog-card__why-list">
-          <li>Provides immediate food security while preserving dignity and the right to choose</li>
-          <li>Frees limited household income for rent, medicine, clothes, and education</li>
-          <li>Supports local businesses and the local economy</li>
-          <li>Reduces stigma and strengthens solidarity between displaced families and host communities</li>
-        </ul>
-
-        <div class="prog-card__numbers">
-          <p>$3,600 per family, per year.<br/>$60,000 a month supports 200 families consistently.</p>
-        </div>
-
-        <div class="prog-card__cta">
-          <a href="#donate" class="btn btn--primary">Fill the G.A.P. Now</a>
-        </div>
-      </div>
-
-      <!-- SCHOLARSHIP -->
-      <div class="prog-card reveal">
-        <div class="prog-card__image">
-          <img src="https://blocks.astratic.com/img/general-img-landscape.png" alt="Higher Education Scholarship Programme" />
-        </div>
-        <p class="prog-card__tag">Scholarship</p>
-        <h3 class="prog-card__title">Higher Education Scholarship Programme</h3>
-        <p class="prog-card__tagline">&nbsp;</p>
-
-        <p class="prog-card__section-label">The need</p>
-        <p class="prog-card__text">A maze of almost 1,000 military checkpoints and repeated army incursions have prevented students from reaching their universities and caused a sharp increase in unemployment. As families lose income, female students are disproportionately forced to suspend or abandon their studies.</p>
-
-        <p class="prog-card__section-label">The mechanism</p>
-        <p class="prog-card__text">Targeted, needs-based tuition assistance for female students unable to afford higher education or at risk of being forced to stop. We support students at Al-Quds Open University and An-Najah National University. We do not fund private universities.</p>
-
-        <p class="prog-card__section-label">Eligibility priorities</p>
-        <ul class="prog-card__elig-list">
-          <li>Orphans and families where a parent or sibling is a martyr or deceased</li>
-          <li>Severe economic hardship, families with sick or injured members</li>
-          <li>Survivors of violence, former detainees, divorced women</li>
-          <li>Those directly impacted by the occupation</li>
-        </ul>
-
-        <div class="prog-card__numbers">
-          <p>
-            ~$150 Arts &amp; Humanities &nbsp;·&nbsp; ~$200 Engineering<br/>
-            ~$260 Medicine &nbsp;·&nbsp; Year 1 goal: $50,000
-          </p>
-        </div>
-
-        <div class="prog-card__cta">
-          <a href="#donate" class="btn btn--primary">Support Her Education</a>
-        </div>
-      </div>
-
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Wa'ad Community Fund</p>
     </div>
-  </div>
-</section>
-
-<!-- ── TESTIMONIALS ────────────────────────────────────── -->
-<section class="section section--pale">
-  <div class="wrap">
-    <p class="section__tag reveal">Voices</p>
-    <h2 class="section__h2 reveal">
-      From the ground.
-    </h2>
-
-    <div class="testimonials__numbers reveal">
-      <div class="testimonials__num-item">
-        <span class="big">450+</span>
-        <span class="sm">Families reached</span>
-      </div>
-      <div class="testimonials__num-item">
-        <span class="big">4</span>
-        <span class="sm">Campaigns</span>
-      </div>
-      <div class="testimonials__num-item">
-        <span class="big">$11,500</span>
-        <span class="sm">First campaign</span>
-      </div>
-      <div class="testimonials__num-item">
-        <span class="big">$28,000</span>
-        <span class="sm">Most recent campaign</span>
-      </div>
-    </div>
-
-    <div class="testimonials__grid">
-      <div class="testimonial reveal">
-        <p class="testimonial__quote">
-          "They told me to celebrate — they'd gone to the market to buy a treat for their children for the holiday. They haven't been able to buy anything since the start of the War."
-        </p>
-        <p class="testimonial__attr">Layali &nbsp;·&nbsp; Women's Studies Centre Social Worker, Nablus</p>
-      </div>
-      <div class="testimonial reveal">
-        <p class="testimonial__quote">
-          "My daughter married a man from Gaza. Her entire family was killed — everyone except my five-year-old granddaughter. Being here with you all, it's the first time I haven't felt totally alone since I got the news."
-        </p>
-        <p class="testimonial__attr">Samar &nbsp;·&nbsp; Resident of Jenin Camp, grandmother</p>
-      </div>
-      <div class="testimonial reveal">
-        <p class="testimonial__quote">
-          "You all are the first people to come and offer any assistance. Tell the world — we just want to live like everyone else."
-        </p>
-        <p class="testimonial__attr">Nisreen &nbsp;·&nbsp; Resident of Askar Camp, Nablus, mother of six</p>
-      </div>
-    </div>
-
-    <p class="testimonials__transparency reveal">
-      Every donation goes directly to the programme, including the costs that keep it running reliably, long term.
-    </p>
-  </div>
-</section>
-
-<!-- ── DISTRIBUTION ────────────────────────────────────── -->
-<section class="section section--cream">
-  <div class="wrap">
-    <div class="distribution__grid">
-      <div class="distribution__image reveal">
-        <!-- Replace src with your actual image -->
-        <img src="https://blocks.astratic.com/img/general-img-landscape.png" alt="Community distribution" />
-      </div>
-      <div class="distribution__text">
-        <h2 class="section__h2 reveal">Where does your contribution go?</h2>
-        <div class="distribution__body reveal">
-          <p>
-            Distributed directly through our in-country partner networks. Families are identified through regular house visits by social workers, at-length discussions, and cross-checked lists, to ensure fairness and prevent favouritism.
-          </p>
-          <p>
-            We do not work with international intermediaries. We do not fund occupation-affiliated organisations. Every decision about who receives support and how it is delivered is made by Palestinian partners in the communities themselves.
-          </p>
-          <p>
-            We publish our numbers. We are accountable to the communities we serve.
-          </p>
-        </div>
-        <div class="reveal" style="margin-top: 2.5rem;">
-          <a href="#donate" class="btn btn--primary">Solidarity is a practice. Start here.</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── FINAL CTA ───────────────────────────────────────── -->
-<section class="final-cta" id="donate">
-  <div class="final-cta__inner reveal">
-    <p class="final-cta__tag">Join Us</p>
-    <h2 class="final-cta__h2">
-      Stand with the communities<br/>
-      <em>that refuse to disappear.</em>
-    </h2>
-    <p class="final-cta__sub">Rooted in community. Accountable to the people we serve.</p>
-
-    <div class="final-cta__actions">
-      <a href="https://www.joinwaad.org/donate" class="btn btn--primary">Stand With Us</a>
-      <a href="https://www.joinwaad.org/donate#monthly" class="btn btn--ghost">Monthly Giving</a>
-    </div>
-
-    <div class="final-cta__secondary">
-      <a href="https://instagram.com/waadfund" target="_blank" rel="noopener">Follow @waadfund</a>
-      <a href="mailto:contact@waadfund.org">Get in Touch</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── FOOTER ─────────────────────────────────────────── -->
-<footer>
-  <div class="footer__inner">
-    <div>
-      <p class="footer__brand-name">Wa'ad Community Fund</p>
-      <p class="footer__brand-desc">
-        A grassroots community fund working in solidarity with Palestinian families and students in the Northern West Bank.
-        Palestinian partners lead this work. We ensure they have the resources they need.
-      </p>
-      <p class="footer__reg">501(c)(3) recognised Vermont nonprofit corporation</p>
-    </div>
-    <div class="footer__col">
-      <p class="footer__col-title">Contact</p>
-      <a href="mailto:contact@waadfund.org">contact@waadfund.org</a>
-      <a href="https://instagram.com/waadfund" target="_blank" rel="noopener">@waadfund</a>
-    </div>
-    <div class="footer__col">
-      <p class="footer__col-title">Areas served</p>
-      <p>Nablus &nbsp;·&nbsp; Tulkarem<br/>Jenin &nbsp;·&nbsp; Tubas<br/>Jerusalem</p>
-    </div>
-  </div>
-  <div class="footer__bottom">
-    <p class="footer__copy">© 2025 Wa'ad Community Fund</p>
-  </div>
-</footer>
+  </footer>
 
 
-<script>
-  // ── Nav scroll state
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  });
-
-  // ── Hamburger menu
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  hamburger.addEventListener('click', () => {
-    const isOpen = hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open', isOpen);
-    hamburger.setAttribute('aria-expanded', isOpen);
-  });
-
-  // Close mobile menu when a link is clicked
-  document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', false);
+  <script>
+    // ── Nav scroll state
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
     });
-  });
 
-  // Close mobile menu on outside click
-  document.addEventListener('click', (e) => {
-    if (!nav.contains(e.target) && !mobileMenu.contains(e.target)) {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', false);
-    }
-  });
+    // ── Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-  // ── Reveal on scroll
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
+      });
+    });
+
+    // Close mobile menu on outside click
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !mobileMenu.contains(e.target)) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
-  reveals.forEach(r => observer.observe(r));
+    // ── Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
-  // Hero stagger — show immediately
-  document.querySelectorAll('.hero .reveal').forEach((el, i) => {
-    setTimeout(() => el.classList.add('visible'), i * 120);
-  });
-</script>
+    reveals.forEach(r => observer.observe(r));
+
+    // Hero stagger — show immediately
+    document.querySelectorAll('.hero .reveal').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), i * 120);
+    });
+  </script>
 
 </body>
+
 </html>
